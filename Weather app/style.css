@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 200px; /* Set a height to the container for demonstration purposes */
+    border: 1px solid black; /* Add a border to the container for visualization */
+  }
+
+  
