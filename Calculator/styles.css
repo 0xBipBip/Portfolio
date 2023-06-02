@@ -6,9 +6,14 @@
 }
 
 .container .row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px; /* Adjust the margin as needed */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    /* height: 100%;
+    grid-gap: .5rem;
+    padding: 1rem;
+    background: #212121;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem; */
 }
 
 .container button {
