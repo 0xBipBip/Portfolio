@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.container .row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.container button {
+    margin: 0 5px; /* Adjust the margin as needed */
+}
