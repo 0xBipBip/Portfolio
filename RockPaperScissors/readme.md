@@ -29,3 +29,49 @@ function playGame() {
 ```
 
 You can use this pseudo code as a starting point to implement the game in JavaScript. Remember to convert the pseudo code into actual JavaScript code by implementing the necessary functions and logic.
+
+
+------------------------------------------------------------------------------------------------------
+
+JS code for this:
+
+// Function to generate computer's choice
+function computerChoice() {
+  const choices = ["rock", "paper", "scissors"];
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  return choices[randomIndex];
+}
+
+// Function to determine the winner
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return "It's a tie!";
+  } else if (
+    (userChoice === "rock" && computerChoice === "scissors") ||
+    (userChoice === "paper" && computerChoice === "rock") ||
+    (userChoice === "scissors" && computerChoice === "paper")
+  ) {
+    return "You win!";
+  } else {
+    return "Computer wins!";
+  }
+}
+
+// Function to play the game
+function playGame() {
+  const userChoice = prompt(
+    "Enter your choice: Rock, Paper, or Scissors"
+  ).toLowerCase();
+  if (userChoice !== "rock" && userChoice !== "paper" && userChoice !== "scissors") {
+    alert("Invalid choice. Please try again.");
+    return;
+  }
+  
+  const compChoice = computerChoice();
+  const result = determineWinner(userChoice, compChoice);
+  
+  alert(`Your choice: ${userChoice}\nComputer's choice: ${compChoice}\nResult: ${result}`);
+}
+
+// Call the playGame() function to start the game
+playGame();
