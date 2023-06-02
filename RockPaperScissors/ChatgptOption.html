@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock, Paper, Scissors</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .buttons {
+      margin: 20px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rock, Paper, Scissors</h1>
+  <div class="buttons">
+    <button onclick="makeChoice('rock')">Rock</button>
+    <button onclick="makeChoice('paper')">Paper</button>
+    <button onclick="makeChoice('scissors')">Scissors</button>
+  </div>
+  <div class="result">
+    <p>Choose your move!</p>
+  </div>
+
+  <script>
+    function makeChoice(userChoice) {
+      var choices = ['rock', 'paper', 'scissors'];
+      var computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+      var result = determineWinner(userChoice, computerChoice);
+
+      displayResult(userChoice, computerChoice, result);
+    }
+
+    function determineWinner(userChoice, computerChoice) {
+      if (userChoice === computerChoice) {
+        return "It's a tie!";
+      } else if (
+        (userChoice === 'rock' && computerChoice === 'scissors') ||
+        (userChoice === 'paper' && computerChoice === 'rock') ||
+        (userChoice === 'scissors' && computerChoice === 'paper')
+      ) {
+        return "You win!";
+      } else {
+        return "Computer wins!";
+      }
+    }
+
+    function displayResult(userChoice, computerChoice, result) {
+      var resultDiv = document.querySelector('.result');
+      resultDiv.innerHTML = `
+        <p>You chose ${userChoice}.</p>
+        <p>The computer chose ${computerChoice}.</p>
+        <p>${result}</p>
+      `;
+    }
+  </script>
+</body>
+</html>

@@ -4,6 +4,7 @@ que los ID deben ser únicos en el documento, mientras que las clases pueden apl
 elementos.*/
 
 body {
+    background-color: rgba(17, 33, 173, 0.733);
     text-align: center;
   }
   
