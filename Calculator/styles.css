@@ -8,6 +8,7 @@
 .container .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
+    grid-gap: .1rem;
     /* height: 100%;
     grid-gap: .5rem;
     padding: 1rem;
